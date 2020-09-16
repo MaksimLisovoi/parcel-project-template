@@ -1,12 +1,81 @@
 .reviews {
+  padding-top: 50px;
+  padding-bottom: 50px;
   text-align: center;
 }
 
+.slider-card {
+  padding: 20px 20px 30px;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.icon-vk {
+  margin-bottom: 20px;
+  width: 30px;
+  height: 30px;
+  fill: #436eab;
+}
+
 .student-name {
+  margin-bottom: 10px;
   font-weight: 800;
   font-size: 14px;
   line-height: 1.214;
   letter-spacing: 0.08em;
 
   color: $accent-color;
+}
+
+.student-education {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  color: $secondary-text-color;
+}
+
+.student-about {
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  color: $black-text-color;
+}
+
+.read-more {
+  display: block;
+  // text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  text-decoration-line: underline;
+  color: $accent-color;
+}
+
+.slider-point {
+  display: flex;
+  align-items: center;
+}
+
+.icon-arrow {
+  width: 25px;
+  fill: $accent-color;
+  margin-right: 24px;
+
+  &.right {
+    margin-right: 0;
+    margin-left: 24px;
+  }
+}
+
+.students-foto {
+  display: flex;
+  // justify-content: space-around;
 }
