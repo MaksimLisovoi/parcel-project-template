@@ -17,25 +17,25 @@
   }
 }
 
-.slider {
-  position: relative;
-  width: 280px;
-  min-height: 564px;
-  margin-left: auto;
-  margin-right: auto;
+// .slider {
+//   position: relative;
+//   // width: 280px;
+//   // min-height: 564px;
+//   margin-left: auto;
+//   margin-right: auto;
 
-  overflow: hidden;
+//   overflow: hidden;
 
-  @include for-size(tablet-landscape) {
-    width: 688px;
-    height: 313px;
-  }
+//   // @include for-size(tablet-landscape) {
+//   //   width: 688px;
+//   //   height: 313px;
+//   // }
 
-  @include for-size(desktop) {
-    width: 1090px;
-    min-height: 370px;
-  }
-}
+//   // @include for-size(desktop) {
+//   //   width: 1090px;
+//   //   min-height: 370px;
+//   // }
+// }
 
 .slick-slider-item {
   position: relative;
@@ -78,16 +78,6 @@
   }
 }
 
-.text-block {
-  @include for-size(tablet-landscape) {
-    width: 421px;
-  }
-
-  @include for-size(desktop) {
-    width: 706px;
-  }
-}
-
 .icon-vk {
   margin-bottom: 20px;
   width: 30px;
@@ -97,6 +87,16 @@
   @include for-size(tablet-landscape) {
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+.text-block {
+  @include for-size(tablet-landscape) {
+    width: 421px;
+  }
+
+  @include for-size(desktop) {
+    width: 706px;
   }
 }
 
@@ -167,18 +167,13 @@
   }
 }
 
-.slider-point {
-  display: flex;
-  align-items: center;
-}
-
-.icon-arrow {
-  width: 25px;
-  height: 14px;
-  fill: $accent-color;
-}
+// .slider-point {
+//   display: flex;
+//   align-items: center;
+// }
 
 .students-foto {
+  position: relative;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -205,6 +200,40 @@
   // &:focus {
   //   fill: $accent-color;
   // }
+}
+
+@include for-size(tablet-landscape) {
+  .prev {
+    position: absolute;
+    left: -14%;
+    top: -355%;
+  }
+
+  .next {
+    position: absolute;
+    right: -14%;
+    top: -355%;
+  }
+}
+
+@include for-size(desktop) {
+  .prev {
+    position: absolute;
+    left: -60%;
+    top: -400%;
+  }
+
+  .next {
+    position: absolute;
+    right: -60%;
+    top: -400%;
+  }
+}
+
+.icon-arrow {
+  width: 25px;
+  height: 14px;
+  fill: $accent-color;
 }
 
 .more-dots {
