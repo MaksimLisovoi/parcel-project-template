@@ -8,16 +8,14 @@
 }
 
 .bg{
-    background-color: #FFFFFF;
-
-    // width: 280px;
+    background-color: $primary-white-color;
     padding-top: 30px;
     margin-bottom: 15px;
     box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 
     &:hover{
-        background-color: #FF6B09;
+        background-color: $accent-color;
     }
 
     @include for-size(tablet-landscape) {
@@ -75,7 +73,7 @@
         padding: 0 5px 25px;
         margin: 0;
         text-align: center;
-        color: #B9B9B9;
+        color: $secondary-text-color;
 
         @include for-size(tablet-landscape){
               font-weight: 500;
@@ -117,10 +115,9 @@
       }
   }
 
-
 .icon-book{
     display: block;
-    fill: #FF6B09;
+    fill: $accent-color;
     margin: auto;
     margin-bottom: 20px;
 
@@ -131,14 +128,14 @@
 
 .bg:hover .icon-book
 {
-    fill: #FFFFFF;
+    fill: $primary-white-color;
 }
 
 .bg:hover .title,
 .bg:hover .title-text,
 .bg:hover .element
 {
-    color: #FFFFFF;
+    color: $primary-white-color;
 }
 
 .element{
@@ -148,7 +145,7 @@
     line-height: 164.9%;
     justify-content: center;
     letter-spacing: 0.08em;
-    color: #FF6B09;
+    color: $accent-color;
     margin-top: 5px;
     margin-bottom: 5px;
 
