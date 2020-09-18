@@ -1,0 +1,28 @@
+.warranty-section {
+  margin-top: 50px;
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.warrenty-list {
+  margin: 30px 0 31px;
+  background-color: #f1f1f1;
+}
+
+.warrenty-item {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  color: $black-text-color;
+
+  &:not(:last-child) {
+    margin-bottom: 23px;
+  }
+}
+
+.accent-text {
+  color: $accent-color;
+}
