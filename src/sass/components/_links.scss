@@ -1,0 +1,26 @@
+.link.menu {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+
+  color: $primary-white-color;
+
+  @include for-size(tablet-landscape) {
+    font-size: 26px;
+  }
+
+  @include for-size(desktop) {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.214;
+    text-transform: uppercase;
+
+    color: $secondary-text-color;
+  }
+}
+
+.link.current {
+  color: $accent-color;
+}

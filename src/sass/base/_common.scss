@@ -3,7 +3,7 @@ body {
   color: $primary-black-color;
   font-family: 'Montserrat', sans-serif;
 }
-.list {
+li {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -13,22 +13,42 @@ img {
   max-width: 100%;
   height: auto;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: $primary-black-color;
+}
 .container {
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
 
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @include for-size(tablet-portrait) {
     width: 320px;
   }
   @include for-size(tablet-landscape) {
     width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   @include for-size(desktop) {
-    width: 1314px;
+    width: 1344px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 .section-title {
