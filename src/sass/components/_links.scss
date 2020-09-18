@@ -10,11 +10,17 @@
   @include for-size(tablet-landscape) {
     font-size: 26px;
   }
-}
-.mobile-nav {
-  margin-top: 50px;
 
-  @include for-size(tablet-landscape) {
-    margin-top: 70px;
+  @include for-size(desktop) {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.214;
+    text-transform: uppercase;
+
+    color: $secondary-text-color;
   }
+}
+
+.link.current {
+  color: $accent-color;
 }
