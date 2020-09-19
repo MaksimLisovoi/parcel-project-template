@@ -808,6 +808,19 @@
       //   onChange: () => {},
       // });
     </script>
+    <!-- добавляет скрипт для dots -->
+    <script>
+      Siema.prototype.addPagination = function () {
+        for (let i = 0; i < this.innerElements.length; i++) {
+          const btn = document.createElement('button');
+          btn.textContent = i;
+          btn.addEventListener('click', () => this.goTo(i));
+          this.selector.appendChild(btn);
+        }
+      };
+      // Trigger pagination creator
+      mySiema.addPagination();
+    </script>
     <script type="text/javascript">
       function change_visibility(block_4_close, block_4_open) {
         document.getElementById(block_4_close).style.display = 'none';
