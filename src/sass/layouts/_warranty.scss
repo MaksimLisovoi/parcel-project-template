@@ -1,10 +1,7 @@
 .warranty-section {
   @media screen and (max-width: 767px) {
-    background: #f1f1f1;
+    background: linear-gradient(to bottom, #fff 11%, #f1f1f1 0%);
   }
-
-  // padding-top: 50px;
-  // padding-bottom: 50px;
 
   .section-title {
     text-align: center;
@@ -14,10 +11,6 @@
       margin-bottom: 50px;
     }
   }
-}
-
-.bg-list {
-  background-color: #f1f1f1;
 }
 
 .warrenty-list {
@@ -71,7 +64,26 @@
   }
 }
 
-.text::before {
+.quote {
+  margin: 0;
+  padding-left: 35px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  color: $black-text-color;
+
+  @include for-size(tablet-landscape) {
+    padding-left: 39px;
+  }
+
+  @include for-size(desktop) {
+    padding-left: 52px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.quote::before {
   content: ' ';
   position: absolute;
   left: 0;
@@ -93,31 +105,6 @@
     background-size: contain;
   }
 }
-
-.text {
-  margin: 0;
-  padding-left: 35px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.67;
-  color: $black-text-color;
-
-  @include for-size(tablet-landscape) {
-    padding-left: 39px;
-  }
-
-  @include for-size(desktop) {
-    padding-left: 52px;
-    font-size: 20px;
-    line-height: 1.4;
-  }
-}
-
-// .line {
-//   border-left: 1px dashed #B9B9B9;
-//   padding-left: 10px;
-//   margin-left: 10px;
-// }
 
 .accent-text {
   color: $accent-color;
