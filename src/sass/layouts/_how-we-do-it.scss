@@ -1,7 +1,13 @@
 .how {
   padding-top: 350px;
+  padding-bottom: 50px;
+
   @include for-size(tablet-landscape) {
-    padding-top: 310px;
+    padding-top: 280px;
+  }
+
+  @include for-size(desktop) {
+    padding-bottom: 130px;
   }
 }
 

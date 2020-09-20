@@ -1,7 +1,8 @@
 .teacher-secction {
   background-color: $primary-white-color;
+  padding-top: 39px;
+  padding-bottom: 50px;
 
-  padding-top: 130px;
   @media screen and (min-width: 767px) {
     padding-top: 50px;
   }
@@ -109,7 +110,6 @@
     line-height: 1.555;
   }
   color: $accent-color;
-  padding-bottom: 50px;
 }
 
 .box-img {
@@ -122,12 +122,12 @@
 }
 
 .teacher-box {
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: flex-start;
   }
-  @media screen and (min-width: 1314px) {
-    margin-bottom: 137px;
-  }
+  // @media screen and (min-width: 1314px) {
+  //   margin-bottom: 137px;
+  // }
 }

@@ -1,13 +1,15 @@
 .program-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: $primary-black-color;
 
   @include for-size(tablet-landscape) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    // padding-top: 60px;
+    padding-bottom: 50px;
   }
   @include for-size(desktop) {
     position: relative;
-    padding-top: 120px;
+    padding-top: 164px;
   }
   &::before {
     @include for-size(desktop) {
@@ -94,7 +96,7 @@
     bottom: 9px;
     z-index: 99999;
     @include for-size(desktop) {
-      top: -49px;
+      top: -93px;
       left: 0;
     }
   }
