@@ -3,7 +3,7 @@
 .menu-burger {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 .menu-burger.open {
   padding-top: 30px;
