@@ -1,0 +1,193 @@
+.footer{
+      background-color: rgba(17, 21, 24, 0.9);
+      background-image: url(../images/footer/footer-320.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-bottom: 50px;
+      // color: salmon;
+
+    @include for-size(tablet-portrait){
+      background-image: url(../images/footer/footer-768.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx){
+        background-image: url(../images/footer/footer-768@2x.png);
+      }
+    }
+
+    @include for-size(desktop){
+      background-image: url(../images/footer/footer-1314.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx){
+          background-image: url(../images/footer/footer-1314@2x.png);
+      }
+    }
+  }
+
+.text-footer{
+    color: #ffffff;
+    text-align: center;
+
+      & span{
+      color: #FF6B09;
+  }
+}
+
+  .text{
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    padding: 50px 20px 0 20px;
+    margin-bottom: 0;
+   
+      &-1{
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 1.25;
+          letter-spacing: 0.08em;
+          margin: 0;
+          margin-bottom: 30px;
+          margin-top: 30px;
+          padding-right: 20px;
+          padding-left: 20px;
+
+      @include for-size(tablet-portrait){
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      @include for-size(desktop){
+        font-size: 30px;
+        line-height: 37px;
+        margin: 0;
+        margin-bottom: 40px;
+        margin-top: 30px;
+      }
+    }
+
+      @include for-size(tablet-portrait){
+        font-size: 26px;
+        line-height: 1.3;
+        letter-spacing: 0.03em;
+      }
+
+      @include for-size(desktop){
+        font-size: 46px;
+      }              
+  }
+
+    .form-footer{
+      text-align: center;
+    }
+
+    .form-data{
+      width: 280px;
+      background-color: transparent;
+      padding: 15px 0 15px 25px;
+      border: none;
+      outline: 1px solid white;
+
+        &:not(:last-child){
+          margin-bottom: 20px;
+        }
+  
+        &:last-child{
+          margin-bottom: 50px;
+        }
+    }
+
+    @media screen and (min-width: 450px){
+    .form-data{
+      width: 390px;
+    }
+  }
+
+    @media screen and (min-width: 767px){
+      .form-data{
+        width: 480px;
+      }
+  }
+
+    @media screen and (min-width: 1314px){
+      .form-data{
+        height: 70px;
+      }
+}
+  
+  .btn{
+      width: 260px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.25;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #FF6B09;
+  }
+
+  .contacts{
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    // @include for-size(tablet-portrait){
+    //   display: inline-block;
+      // width: calc(100% - 20px) / 2;
+      // justify-content: space-between;
+    }
+  
+
+.logo{
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+  // .contacts-icon{
+  //   vertical-align: middle;
+  //   fill: #FF6B09;
+  // }
+
+  // .contacts-icon::before{
+  //   display: block;
+  //   content: " ";
+  //   top: 50%;
+  // }
+
+  .tel{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .icon-insta{
+    display: flex;
+    justify-content: center;
+  }
+
+.bg-footer{
+  width: 100%;
+  background: #111518;;
+}
+
+
+.attention{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+  color: #B9B9B9;
+  display: flex;
+  justify-content: center;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  @include for-size(tablet-portrait){
+    
+  }
+  }
