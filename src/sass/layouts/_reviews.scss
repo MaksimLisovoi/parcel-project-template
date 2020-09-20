@@ -3,6 +3,11 @@
   padding-bottom: 50px;
   text-align: center;
 
+  @include for-size(tablet-landscape) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+
   .section-title {
     margin-top: 0;
     margin-bottom: 20px;
@@ -19,6 +24,11 @@
 
 .slider {
   position: relative;
+  margin-bottom: 77px;
+
+  @include for-size(tablet-landscape) {
+    margin-bottom: 85px;
+  }
 }
 
 .prev,
