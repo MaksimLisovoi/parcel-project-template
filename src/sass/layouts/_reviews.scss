@@ -21,6 +21,50 @@
   position: relative;
 }
 
+.prev,
+.next {
+  position: absolute;
+  top: 107%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  fill: $primary-white-color;
+}
+
+.next {
+  right: 2px;
+}
+
+@include for-size(tablet-landscape) {
+  .prev {
+    left: -15px;
+    top: 44%;
+  }
+
+  .next {
+    right: -15px;
+    top: 44%;
+  }
+}
+
+@include for-size(desktop) {
+  .prev {
+    left: 60px;
+  }
+
+  .next {
+    right: 60px;
+  }
+}
+
+.icon-arrow {
+  width: 25px;
+  height: 14px;
+  fill: $accent-color;
+}
+
 .siema {
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
   margin-bottom: 20px;
@@ -275,61 +319,4 @@
     font-size: 18px;
     line-height: 1.56;
   }
-}
-
-// .slider-point {
-//   position: relative;
-//   margin-right: auto;
-//   margin-left: auto;
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-
-//   @include for-size(tablet-landscape) {
-//     width: 558px;
-//   }
-// }
-
-.prev,
-.next {
-  position: absolute;
-  top: 107%;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background-color: transparent;
-  fill: $primary-white-color;
-}
-
-.next {
-  right: 2px;
-}
-
-@include for-size(tablet-landscape) {
-  .prev {
-    left: -15px;
-    top: 44%;
-  }
-
-  .next {
-    right: -15px;
-    top: 44%;
-  }
-}
-
-@include for-size(desktop) {
-  .prev {
-    left: 60px;
-  }
-
-  .next {
-    right: 60px;
-  }
-}
-
-.icon-arrow {
-  width: 25px;
-  height: 14px;
-  fill: $accent-color;
 }
