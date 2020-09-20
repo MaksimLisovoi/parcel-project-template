@@ -17,6 +17,10 @@
   }
 }
 
+.slider {
+  position: relative;
+}
+
 .siema {
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
   margin-bottom: 20px;
@@ -32,8 +36,125 @@
   }
 }
 
+.siema button {
+  position: absolute;
+  top: 104%;
+  border-radius: 50%;
+  border-style: none;
+  color: transparent;
+  width: 54px;
+  height: 54px;
+  z-index: 3;
+
+  @include for-size(tablet-landscape) {
+    top: 110%;
+  }
+
+  &:nth-of-type(1n + 1) {
+    left: 47px;
+    background-image: url(../images/reviews/student-1-1314.jpg);
+
+    @include for-size(tablet-landscape) {
+      left: 60px;
+    }
+
+    @include for-size(desktop) {
+      left: 366px;
+    }
+  }
+
+  &:nth-of-type(1n + 2) {
+    left: 112px;
+    background-image: url(../images/reviews/student-2-1314.jpg);
+
+    @include for-size(tablet-landscape) {
+      left: 144px;
+    }
+
+    @include for-size(desktop) {
+      left: 450px;
+    }
+  }
+
+  &:nth-of-type(1n + 3) {
+    left: 176px;
+    background-image: url(../images/reviews/student-3-1314.jpg);
+
+    @include for-size(tablet-landscape) {
+      left: 228px;
+    }
+
+    @include for-size(desktop) {
+      left: 534px;
+    }
+  }
+
+  &:nth-of-type(1n + 4) {
+    display: none;
+
+    @include for-size(tablet-landscape) {
+      display: inline-block;
+      left: 312px;
+      background-image: url(../images/reviews/student-4-1314.jpg);
+    }
+
+    @include for-size(desktop) {
+      left: 618px;
+    }
+  }
+
+  &:nth-of-type(1n + 5) {
+    display: none;
+
+    @include for-size(tablet-landscape) {
+      display: inline-block;
+      left: 396px;
+      background-image: url(../images/reviews/student-5-1314.jpg);
+    }
+
+    @include for-size(desktop) {
+      left: 702px;
+    }
+  }
+
+  &:nth-of-type(1n + 6) {
+    display: none;
+
+    @include for-size(tablet-landscape) {
+      display: inline-block;
+      left: 480px;
+      background-image: url(../images/reviews/student-6-1314.jpg);
+    }
+
+    @include for-size(desktop) {
+      left: 786px;
+    }
+  }
+
+  &:nth-of-type(1n + 7) {
+    display: none;
+
+    @include for-size(tablet-landscape) {
+      display: inline-block;
+      left: 564px;
+      background-image: url(../images/reviews/student-7-1314.jpg);
+    }
+
+    @include for-size(desktop) {
+      left: 870px;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 10px;
+
+    @include for-size(tablet-landscape) {
+      margin-right: 30px;
+    }
+  }
+}
+
 .slick-slider-item {
-  position: relative;
   padding: 20px 20px 30px;
 
   @include for-size(tablet-landscape) {
@@ -156,61 +277,54 @@
   }
 }
 
-.slider-point {
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+// .slider-point {
+//   position: relative;
+//   margin-right: auto;
+//   margin-left: auto;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
 
-  @include for-size(tablet-landscape) {
-    width: 558px;
-  }
-}
+//   @include for-size(tablet-landscape) {
+//     width: 558px;
+//   }
+// }
 
 .prev,
 .next {
+  position: absolute;
+  top: 107%;
   display: flex;
   padding: 0;
   margin: 0;
   border: none;
   background-color: transparent;
   fill: $primary-white-color;
+}
 
-  // transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  // &:hover,
-  // &:focus {
-  //   fill: $accent-color;
-  // }
+.next {
+  right: 2px;
 }
 
 @include for-size(tablet-landscape) {
   .prev {
-    position: absolute;
-    left: -14%;
-    top: -355%;
+    left: -15px;
+    top: 44%;
   }
 
   .next {
-    position: absolute;
-    right: -14%;
-    top: -355%;
+    right: -15px;
+    top: 44%;
   }
 }
 
 @include for-size(desktop) {
   .prev {
-    position: absolute;
-    left: -60%;
-    top: -400%;
+    left: 60px;
   }
 
   .next {
-    position: absolute;
-    right: -60%;
-    top: -400%;
+    right: 60px;
   }
 }
 
@@ -218,10 +332,4 @@
   width: 25px;
   height: 14px;
   fill: $accent-color;
-}
-
-.more-dots {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
 }
