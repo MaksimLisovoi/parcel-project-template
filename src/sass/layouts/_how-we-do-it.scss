@@ -6,8 +6,6 @@
 }
 
 .background {
-  background-color: #e5e5e5;
-
   @include for-size(tablet-landscape) {
     display: flex;
     flex-wrap: wrap;
