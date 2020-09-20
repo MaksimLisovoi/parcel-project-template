@@ -105,6 +105,7 @@
   padding: 15px 0 15px 25px;
   border: none;
   outline: 1px solid white;
+  color: $primary-white-color;
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -113,6 +114,9 @@
   &:last-child {
     margin-bottom: 50px;
   }
+}
+.form-data::placeholder {
+  color: $primary-white-color;
 }
 
 @media screen and (min-width: 450px) {

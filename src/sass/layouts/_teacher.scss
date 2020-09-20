@@ -1,16 +1,23 @@
-.teacher-section {
-  background-color: #e5e5e5;
-}
-.teacher-head-title {
-  padding-top: 270px;
-  margin-bottom: 20px;
+.teacher-secction {
+  background-color: $primary-white-color;
+
+  padding-top: 130px;
   @media screen and (min-width: 767px) {
-    margin-bottom: 30px;
     padding-top: 50px;
   }
   @media screen and (min-width: 1314px) {
+    padding-top: 130px;
+  }
+}
+.teacher-head-title {
+  // padding-top: 270px;
+  margin-bottom: 20px;
+  @media screen and (min-width: 767px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1314px) {
     margin-bottom: 50px;
-    padding-top: 329px;
+    // padding-top: 329px;
   }
 }
 .teacher-title {
