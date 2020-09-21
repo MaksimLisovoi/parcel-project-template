@@ -24,6 +24,8 @@
   }
   @include for-size(desktop) {
     padding: 101px 30px 70px;
+    position: absolute;
+    top: -153px;
   }
 }
 .choosen-list {
@@ -40,7 +42,11 @@
   text-align: left;
   margin: 0;
   margin-bottom: 30px;
-  width: 180px;
+
+  @media screen and (max-width: 767px) {
+    width: 180px;
+  }
+
   @include for-size(desktop) {
     display: none;
   }
