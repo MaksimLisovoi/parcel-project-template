@@ -18,6 +18,7 @@
   background-color: $primary-white-color;
   padding: 20px 30px;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  max-width: 1314px;
 
   @include for-size(tablet-landscape) {
     padding: 60px 30px 25px;
