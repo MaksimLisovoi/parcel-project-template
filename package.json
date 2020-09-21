@@ -1,9 +1,9 @@
 {
-  "name": "project-team-11",
+  "name": "parcel-project-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://MaksimLisovoi.github.io/parcel-project-template",
+  "homepage": "https://maksimlisovoi.github.io/parcel-project-template",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
