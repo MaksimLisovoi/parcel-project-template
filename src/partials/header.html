@@ -33,52 +33,54 @@
         <li class="list"><a class="link menu" href="#contacts">Контакты</a></li>
       </ul>
 
-       <div class="tablet-position">
-      <a href="#contacts" class="btn secondary tablet">Консультация по телефону</a>
-        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-          <svg  class="btn-hover"
-            width="30"
-            height="30"
-            aria-label="Переключатель мобильного меню">
-            <use class="icon-menu" href="../src/images/sprite.svg#menu"></use>
-            <use class="icon-cross" href="../src/images/sprite.svg#close"></use>
+      <div class="tablet-position">
+        <a href="#contacts" class="btn secondary tablet">Консультация по телефону</a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-open>
+          <svg class="btn-hover" width="30" height="30" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="./images/sprite.svg#menu"></use>
           </svg>
-          </div>
+      
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-close>
+            <svg class="btn-hover" width="30" height="30" aria-label="Переключатель мобильного меню">
+              <use class="icon-cross" href="./images/sprite.svg#close"></use>
+            </svg>
+      
       </div>
-        <!-- Mobile navigation -->
-
-      <div class="menu-container container" data-menu>
+      </div>
+      <!-- Mobile navigation -->
+      
+      <div class="menu-container container" id="menu-container" data-menu>
         <div class="menu-burger">
           <a href="" class="logo white logo-link"> <span class="logo black">
-            <div class="logo-flex">
-              <span class="logo-hell white">Hell</span>
-              <svg class="ampfire">
-                <use clas href="../src/images/sprite.svg#icon-ampfire"></use>
-              </svg>
-              <span class="logo-hell white">EN</span>
-            </div>
-            <span class="logo-ru">
-              <span class="span-hell">Адский </span> <span class="white">английский</span>
-            </span>
-          </span> </a>
+              <div class="logo-flex">
+                <span class="logo-hell white">Hell</span>
+                <svg class="ampfire">
+                  <use clas href="./images/sprite.svg#icon-ampfire"></use>
+                </svg>
+                <span class="logo-hell white">EN</span>
+              </div>
+              <span class="logo-ru">
+                <span class="span-hell">Адский </span> <span class="white">английский</span>
+              </span>
+            </span> </a>
           <a href="" class="logo-link-mobile">
             <svg class="logo-mobile">
-              <use href="../src/images/sprite.svg#icon-logo-white"></use>
+              <use href="./images/sprite.svg#icon-logo-white"></use>
             </svg>
         </div>
-        <div class="mobile-nav">
+        <div class="mobile-nav" data-menu-link>
           <ul class="mobile-nav-list">
             <li class="list">
-              <a class="link menu" href="">Программа обучения</a>
+              <a class="link menu" href="#program">Программа обучения</a>
             </li>
-            <li class="list"><a class="link menu current" href="">О нас</a></li>
+            <li class="list"><a class="link menu" href="#teacher">О нас</a></li>
             <li class="list">
-              <a class="link menu" href="">Варианты обучения</a>
+              <a class="link menu" href="#how we do it">Варианты обучения</a>
             </li>
-            <li class="list"><a class="link menu" href="">Контакты</a></li>
+            <li class="list"><a class="link menu" href="#contacts">Контакты</a></li>
           </ul>
           <div class="btn-position">
-          <button class="btn secondary">Консультация по телефону</button>
+            <button class="btn secondary">Консультация по телефону</button>
           </div>
         </div>
       </div>
