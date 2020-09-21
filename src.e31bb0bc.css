@@ -730,6 +730,7 @@ a {
 
 .bg {
   background-color: #ffffff;
+  height: 280px;
   width: 280px;
   padding: 30px 11px 24px 11px;
   margin-bottom: 15px;
@@ -746,6 +747,7 @@ a {
 }
 @media (min-width: 768px) {
   .bg {
+    height: 334px;
     margin-bottom: 27px;
   }
   .bg:not(:nth-last-child(n+3)) {
@@ -754,6 +756,7 @@ a {
 }
 @media (min-width: 1344px) {
   .bg {
+    height: 396px;
     width: calc((100% - 40px) / 3);
     margin-bottom: 20px;
   }
@@ -796,10 +799,17 @@ a {
 .title-text {
   font-size: 12px;
   line-height: 1.67;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.08em;
   margin: 0;
   text-align: center;
   color: #b9b9b9;
+}
+@media (min-width: 1344px) {
+  .title-text {
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.08em;
+  }
 }
 
 .icon-book {
