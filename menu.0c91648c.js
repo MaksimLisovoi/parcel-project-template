@@ -117,83 +117,32 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
+})({"js/menu.js":[function(require,module,exports) {
+(function () {
+  var refs = {
+    openModalBtn: document.querySelector('[data-menu-open]'),
+    closeModalBtn: document.querySelector('[data-menu-close]'),
+    modal: document.querySelector('[data-menu]')
   };
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
 
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+    refs.modal.classList.toggle('is-open');
   }
+})();
 
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\header\\header-320.png":[["header-320.e492b2a0.png","images/header/header-320.png"],"images/header/header-320.png"],"./..\\images\\header\\header-320@2x.png":[["header-320@2x.70b8577d.png","images/header/header-320@2x.png"],"images/header/header-320@2x.png"],"./..\\images\\header\\header-768.png":[["header-768.219af5d2.png","images/header/header-768.png"],"images/header/header-768.png"],"./..\\images\\header\\header-768@2x.png":[["header-768@2x.da22b4bd.png","images/header/header-768@2x.png"],"images/header/header-768@2x.png"],"./..\\images\\icon-program-header.svg":[["icon-program-header.6494e483.svg","images/icon-program-header.svg"],"images/icon-program-header.svg"],"./..\\images\\icon-program-header-desktop.svg":[["icon-program-header-desktop.5afdacae.svg","images/icon-program-header-desktop.svg"],"images/icon-program-header-desktop.svg"],"./..\\images\\icon-study-header.svg":[["icon-study-header.4094eb4d.svg","images/icon-study-header.svg"],"images/icon-study-header.svg"],"./..\\images\\icon-study-header-desktop.svg":[["icon-study-header-desktop.5591ce9a.svg","images/icon-study-header-desktop.svg"],"images/icon-study-header-desktop.svg"],"./..\\images\\icon-warranty-header.svg":[["icon-warranty-header.bdc70e0a.svg","images/icon-warranty-header.svg"],"images/icon-warranty-header.svg"],"./..\\images\\icon-warranty-header-desktop.svg":[["icon-warranty-header-desktop.a7c50f32.svg","images/icon-warranty-header-desktop.svg"],"images/icon-warranty-header-desktop.svg"],"./..\\images\\campfire.svg":[["campfire.df7ed37a.svg","images/campfire.svg"],"images/campfire.svg"],"./..\\images\\our-program\\our-program-320.png":[["our-program-320.8c6db9f3.png","images/our-program/our-program-320.png"],"images/our-program/our-program-320.png"],"./..\\images\\our-program\\our-program-320@2x.png":[["our-program-320@2x.cb002949.png","images/our-program/our-program-320@2x.png"],"images/our-program/our-program-320@2x.png"],"./..\\images\\our-program\\our-program-768.png":[["our-program-768.4fcf7eb4.png","images/our-program/our-program-768.png"],"images/our-program/our-program-768.png"],"./..\\images\\our-program\\our-program-768@2x.png":[["our-program-768@2x.70aacafe.png","images/our-program/our-program-768@2x.png"],"images/our-program/our-program-768@2x.png"],"./..\\images\\our-program\\our-program-1314.png":[["our-program-1314.a9fc706b.png","images/our-program/our-program-1314.png"],"images/our-program/our-program-1314.png"],"./..\\images\\our-program\\our-program-1314@2x.png":[["our-program-1314@2x.11eb1391.png","images/our-program/our-program-1314@2x.png"],"images/our-program/our-program-1314@2x.png"],"./..\\images\\icon-fire.svg":[["icon-fire.f36adb70.svg","images/icon-fire.svg"],"images/icon-fire.svg"],"./..\\images\\reviews\\student-1-1314.jpg":[["student-1-1314.271b5db6.jpg","images/reviews/student-1-1314.jpg"],"images/reviews/student-1-1314.jpg"],"./..\\images\\reviews\\student-2-1314.jpg":[["student-2-1314.3fa65813.jpg","images/reviews/student-2-1314.jpg"],"images/reviews/student-2-1314.jpg"],"./..\\images\\reviews\\student-3-1314.jpg":[["student-3-1314.6dc5557d.jpg","images/reviews/student-3-1314.jpg"],"images/reviews/student-3-1314.jpg"],"./..\\images\\reviews\\student-4-1314.jpg":[["student-4-1314.3f773d2f.jpg","images/reviews/student-4-1314.jpg"],"images/reviews/student-4-1314.jpg"],"./..\\images\\reviews\\student-5-1314.jpg":[["student-5-1314.1c1c3453.jpg","images/reviews/student-5-1314.jpg"],"images/reviews/student-5-1314.jpg"],"./..\\images\\reviews\\student-6-1314.jpg":[["student-6-1314.40163239.jpg","images/reviews/student-6-1314.jpg"],"images/reviews/student-6-1314.jpg"],"./..\\images\\reviews\\student-7-1314.jpg":[["student-7-1314.36066131.jpg","images/reviews/student-7-1314.jpg"],"images/reviews/student-7-1314.jpg"],"./..\\images\\footer\\footer-320.png":[["footer-320.01a42904.png","images/footer/footer-320.png"],"images/footer/footer-320.png"],"./..\\images\\footer\\footer-768.png":[["footer-768.6b1bf248.png","images/footer/footer-768.png"],"images/footer/footer-768.png"],"./..\\images\\footer\\footer-768@2x.png":[["footer-768@2x.317f926b.png","images/footer/footer-768@2x.png"],"images/footer/footer-768@2x.png"],"./..\\images\\footer\\footer-1314.png":[["footer-1314.91c3b33e.png","images/footer/footer-1314.png"],"images/footer/footer-1314.png"],"./..\\images\\footer\\footer-1314@2x.png":[["footer-1314@2x.02e22970.png","images/footer/footer-1314@2x.png"],"images/footer/footer-1314@2x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(function () {
+  var menuNavLink = document.querySelector('[data-menu-link]');
+  var menuBtnRef = document.querySelector('[data-menu-close]');
+  var mobileMenuRef = document.querySelector('[data-menu]');
+  menuNavLink.addEventListener('click', function () {
+    mobileMenuRef.classList.toggle('is-open');
+    menuBtnRef.classList.toggle('is-open');
+  });
+})();
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +346,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/menu.js"], null)
+//# sourceMappingURL=/menu.0c91648c.js.map
